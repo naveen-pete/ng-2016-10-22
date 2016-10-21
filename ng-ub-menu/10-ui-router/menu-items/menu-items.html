@@ -1,0 +1,74 @@
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+               <h2>Breakfast Menu</h2>
+               <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        Search
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label for="any">Any</label>
+                                <input type="text" class="form-control" id="any" ng-model="search.$">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" ng-model="search.name">
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Description</label>
+                                <input type="text" class="form-control" id="description" ng-model="search.description">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <ul class="nav nav-tabs">
+                    <li ng-class="{active: isSelected('Menu')}">
+                        <a ng-click="setTab('Menu')">The Menu</a>
+                    </li>
+                    <li ng-class="{active: isSelected('Dosa')}">
+                        <a ng-click="setTab('Dosa')">Dosa</a>
+                    </li>
+                    <li ng-class="{active: isSelected('Idli')}">
+                        <a ng-click="setTab('Idli')">Idli</a>
+                    </li>
+                    <li ng-class="{active: isSelected('Rice')}">
+                        <a ng-click="setTab('Rice')">Rice</a>
+                    </li>
+                    <li ng-class="{active: isSelected('Beverage')}">
+                        <a ng-click="setTab('Beverage')">Beverage</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <ul class="media-list">
+                        <li class="media" ng-repeat="menuItem in menuItems | filter:search:false">
+                            <div class="media-left media-middle">
+                                <a ui-sref="app.itemDetail({id: menuItem.id})">
+                                    <img class="media-object img-thumbnail" ng-src="{{menuItem.image}}" alt="{{menuItem.name}}">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading">{{menuItem.name}} <span class="badge">{{menuItem.price | currency:'Rs. '}}</span></h3>
+                                <p>{{menuItem.description}}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

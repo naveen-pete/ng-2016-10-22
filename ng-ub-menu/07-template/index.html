@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ubApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form Validation Demo</title>
+
+    <!-- Bootstrap -->
+    <link href="../common/bs/bootstrap.css" rel="stylesheet">
+    <link href="../common/fa/font-awesome.css" rel="stylesheet">
+    <link href="../common/styles/ub-styles.css" rel="stylesheet">
+    
+    <!-- Angular -->
+    <script src="../common/ng/angular.js"></script>
+    <script src="app.js"></script>
+
+</head>
+
+<body ng-controller="AppController">
+
+    <header class="jumbotron text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>{{appSettings.title}}</h1>
+                    <p>The best South Indian snacks in Namma Bengaluru!</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <ng-include src="'home.html'"></ng-include>
+<!--        <ng-include src="'menu-items.html'"></ng-include>-->
+<!--        <ng-include src="'item-detail.html'"></ng-include>-->
+<!--        <ng-include src="'contact-us.html'"></ng-include>-->
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>&copy; {{appSettings.copyright}}, Version {{appSettings.version}}</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

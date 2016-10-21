@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ubApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form Validation Demo</title>
+
+    <!-- Bootstrap -->
+    <link href="../common/bs/bootstrap.css" rel="stylesheet">
+    <link href="../common/fa/font-awesome.css" rel="stylesheet">
+    <link href="../common/styles/ub-styles.css" rel="stylesheet">
+    
+    <!-- Angular -->
+    <script src="../common/ng/angular.js"></script>
+    <script src="../common/ng/angular-ui-router.js"></script>
+    <script src="app.js"></script>
+    <script src="app.ctrl.js"></script>
+    <script src="nav/nav.ctrl.js"></script>
+    <script src="app.config.js"></script>
+    <script src="home/home.ctrl.js"></script>
+    <script src="menu-items/menu-items.ctrl.js"></script>
+    <script src="item-detail/item-detail.ctrl.js"></script>
+    <script src="contact-us/contact-us.ctrl.js"></script>
+    <script src="services/menu-factory.js"></script>
+    <script src="services/app-settings.js"></script>
+
+</head>
+
+<body ng-controller="AppController">
+    <div ui-view="nav"></div>
+    <div ui-view="header"></div>
+    <div ui-view="content"></div>
+    <div ui-view="footer"></div>
+</body>
+</html>

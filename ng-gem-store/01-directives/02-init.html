@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../common/bs/bootstrap.css" />
+    <script type="text/javascript" src="../common/ng/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body ng-init="firstname = 'Naveen'; 
+                 lastname = 'Pete'; 
+                 address = { 
+                    area: 'Jayanagar', 
+                    city: 'Bengaluru'
+                 }">
+    <h1>{{ "Hello, " + firstname  + "!" }}</h1>
+      <h2>Your full name is {{ firstname + " " + lastname}}</h2>
+      <h3>Your live at {{ address.area + ", " + address.city }}</h3>
+  </body>
+</html>

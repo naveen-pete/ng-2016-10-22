@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ubApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form Validation Demo</title>
+
+    <!-- Bootstrap -->
+    <link href="../common/bs/bootstrap.css" rel="stylesheet">
+    <link href="../common/fa/font-awesome.css" rel="stylesheet">
+    <link href="../common/styles/ub-styles.css" rel="stylesheet">
+    
+    <!-- Angular -->
+    <script src="../common/ng/angular.js"></script>
+    <script src="../common/ng/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="app.ctrl.js"></script>
+    <script src="app.nav.ctrl.js"></script>
+    <script src="app.config.js"></script>
+    <script src="home/home.ctrl.js"></script>
+    <script src="menu-items/menu-items.ctrl.js"></script>
+    <script src="item-detail/item-detail.ctrl.js"></script>
+    <script src="contact-us/contact-us.ctrl.js"></script>
+    <script src="services/menu-factory.js"></script>
+    <script src="services/app-settings.js"></script>
+
+</head>
+
+<body ng-controller="AppController">
+    <nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="NavController">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#/">UB</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li ng-class="{ active: isSelected('/') }"><a href="#/">Home</a></li>
+                <li ng-class="{ active: isSelected('/menu') }"><a href="#/menu">Breakfast Menu</a></li>
+                <li ng-class="{ active: isSelected('/contactus') }"><a href="#/contactus">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="jumbotron text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>{{appSettings.title}}</h1>
+                    <p>The best South Indian snacks in Namma Bengaluru!</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <ng-view></ng-view>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>&copy; {{appSettings.copyright}}, Version {{appSettings.version}}</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

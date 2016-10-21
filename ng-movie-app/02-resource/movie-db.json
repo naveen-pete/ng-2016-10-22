@@ -1,0 +1,39 @@
+{
+  "movies": [
+    {
+      "title": "The Martian",
+      "releaseYear": 2014,
+      "director": "Ridley Scott",
+      "genre": "Sci-Fi, Action",
+      "id": 3
+    },
+    {
+      "title": "Rustom",
+      "releaseYear": 2016,
+      "director": "Dharmendra Suresh Desai",
+      "genre": "Crime, Drama",
+      "id": 4
+    },
+    {
+      "title": "MS Dhoni",
+      "releaseYear": 2016,
+      "director": "Neeraj Pandey",
+      "genre": "Biography, Drama",
+      "id": 5
+    },
+    {
+      "title": "Neerja",
+      "releaseYear": 2016,
+      "director": "Ram Madhvani",
+      "genre": "Biography, Drama",
+      "id": 6
+    },
+    {
+      "title": "Sultan",
+      "id": 7,
+      "releaseYear": 2016,
+      "director": "Ali Abbas Zafar",
+      "genre": "Action, Drama"
+    }
+  ]
+}
